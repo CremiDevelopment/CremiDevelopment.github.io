@@ -1,0 +1,2 @@
+<FilesMatch "\.(lua|html)$">
+</FilesMatch>
