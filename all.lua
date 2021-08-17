@@ -2,7 +2,6 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cremi
 
 
 local Gamer = library:CreateSection("Shindo Life");
-local Gamer = library:CreateSection("Settings/Help");
 Gamer:Text("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~");
 Gamer:Button("MheeHub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/RobloxCheat_By_Cremi/main/cheats/MheeHub.lua",true))()
