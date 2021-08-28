@@ -35,4 +35,5 @@ Gamer:Button('Бесконечная Чакра',function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/InfinityChakra.lua'))()    
 end)
 
-library:Ready();
+library:Ready(
+FALSE
