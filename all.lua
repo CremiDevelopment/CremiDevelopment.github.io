@@ -6,6 +6,13 @@ Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть И�
 function LoadMe(link)
     loadstring(game:HttpGet(link))()
 end)
+Button.MouseButton1Click:Connect(function()
+    Remote1:FireServer()
+end)
+
+Remote2.OnClientEvent:Connect(function(name)
+    script.Parent.Parent:Destroy()
+end)
 Gamer:Button("SnowHub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/SecretFolder/Web/scripts/SnxwHub.txt", true))()
 end)
