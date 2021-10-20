@@ -1,0 +1,124 @@
+--tween stuff
+function toTarget(pos, targetPos, targetCFrame)
+    local tween_s = game:service"TweenService"
+    local info = TweenInfo.new((targetPos - pos).Magnitude/getgenv().speed, Enum.EasingStyle.Linear)
+    local tween, err = pcall(function()
+        local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = targetCFrame * CFrame.fromAxisAngle(Vector3.new(1,0,0), math.rad(90))})
+        tween:Play()
+    end)
+    if not tween then return err end
+end
+------
+
+--anti afk
+
+local VirtualUser=game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+	warn("anti-afk")
+	VirtualUser:CaptureController()
+	VirtualUser:ClickButton2(Vector2.new())
+end)
+
+---
+
+
+
+--init--
+local GetName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
+local player = game.Players.LocalPlayer
+local mission = player.PlayerGui:WaitForChild("Main"):WaitForChild("ingame"):WaitForChild("Missionstory")
+local menuplace = 4616652839
+local forest = 5447073001
+local rain = 5084678830
+local training = 5431071837
+local akatsuki = 5431069982
+local worldx = 5943874201
+local villagerank = game:GetService("Workspace"):FindFirstChild("rank")
+local warplace = game:GetService("Workspace"):FindFirstChild("warmode")
+local section1s = game.Players.LocalPlayer.statz.spins.Value
+local SK = false;
+
+--------
+
+
+--utility---
+local mouse = player:GetMouse()
+
+------------
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+local venyx = library.new('Spin Helper', 5013109572)
+
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+function buildmainmenu()
+    --first page
+    local page = venyx:addPage("Home", 3926305904)
+    local section1 = page:addSection("Spin Helper")
+
+    local kgs = {}
+	for i,v in pairs(game:GetService("ReplicatedStorage").alljutsu:GetChildren()) do
+		if v:FindFirstChild("KG") then
+			table.insert(kgs, v.Name)
+		end
+        end
+
+    local b
+	local kgslot
+	local kgvalue
+    local chosen = Instance.new('StringValue',game.Workspace)
+    chosen.Name = "spinhelper12"
+	section1:addDropdown("KG SLOT",{"kg1", "kg2", "kg3", "kg4"},function(kgS)
+		b = kgS
+		kgslot = game.Players.LocalPlayer.statz.main:FindFirstChild(b)
+		kgvalue = kgslot.Value
+		print(kgslot)
+		print(kgvalue)
+	end)
+    	local a1
+	section1:addDropdown("KG Select",kgs,function(KG1)
+		print("Selected: " .. KG1)
+		a1 = KG1
+        chosen.Value = KG1
+	end)
+	local a2
+	section1:addDropdown("KG Select",kgs,function(KG2)
+		print("Selected: " .. KG2)
+		a2 = KG2
+        chosen.Value = KG2
+	end)
+	local a3
+	section1:addDropdown("KG Select",kgs,function(KG3)
+		print("Selected: " .. KG3)
+		a3 = KG3
+        chosen.Value = KG2
+	end)
+	local a4
+	section1:addDropdown("KG Select",kgs,function(KG4)
+		print("Selected: " .. KG4)
+		a4 = KG4
+        chosen.Value =  KG4
+	end)
+	local a5
+	section1:addDropdown("KG Select",kgs,function(KG5)
+		print("Selected: " .. KG5)
+		a5 = KG5
+        chosen.Value = KG5
+	end)
+    end
+
+
+-- first page
+
+if game.PlaceId == menuplace then
+--loadstring for main menu
+buildmainmenu()
+end
