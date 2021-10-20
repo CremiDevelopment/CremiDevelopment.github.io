@@ -1,18 +1,5 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/menu.lua"))();
-local button = script.Parent
-local toggled = false
-local guiObj = ScreenGui 
 
-local function onButtonActivated()
-    if toggled == false then
-        guiObj:Destroy()
-    else
-        button.Text = "Start Game"
-        toggled = false
-    end
-end
-
-button.Activated:Connect(onButtonActivated)
 
 local Gamer = library:CreateSection("Shindo Life");
 Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~");
