@@ -1,17 +1,23 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/menu.lua"))();
+local button = script.Parent
+local toggled = false
+local guiObj = ScreenGui 
 
+local function onButtonActivated()
+    if toggled == false then
+        guiObj:Destroy()
+    else
+        button.Text = "Start Game"
+        toggled = false
+    end
+end
+
+button.Activated:Connect(onButtonActivated)
 
 local Gamer = library:CreateSection("Shindo Life");
 Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~");
 function LoadMe(link)
     loadstring(game:HttpGet(link))()
-end)
-Button.MouseButton1Click:Connect(function()
-    Remote1:FireServer()
-end)
-
-Remote2.OnClientEvent:Connect(function(name)
-    script.Parent.Parent:Destroy()
 end)
 Gamer:Button("SnowHub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/SecretFolder/Web/scripts/SnxwHub.txt", true))()
