@@ -7,10 +7,7 @@ local function initLibrary()
     local CoreGui = GetService(game, "CoreGui");
     local TweenService = GetService(game, "TweenService");
     local UserInputService = GetService(game, "UserInputService");
-    local Button = script.Parent.Close;
 
-    local Remote1 = game.ReplicatedStorage:WaitForChild(“ReportClose1”);
-    local Remote2 = game.ReplicatedStorage:WaitForChild(“ReportClose2”);
     local LocalPlayer = Players.LocalPlayer;
 
     do -- library funcs
