@@ -1,8 +1,8 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/menu.lua"))();
-local Button = script.Parent.Close – assuming this script is a child of a TextButton
 
-local Remote1 = game.ReplicatedStorage:WaitForChild(“ReportClose1”)
-local Remote2 = game.ReplicatedStorage:WaitForChild(“ReportClose2”)
+local Button = script.Parent.Close;
+local Remote1 = game.ReplicatedStorage:WaitForChild(“ReportClose1”);
+local Remote2 = game.ReplicatedStorage:WaitForChild(“ReportClose2”);
 
 Button.MouseButton1Click:Connect(function()
     Remote1:FireServer() -- you can pass the name of the gui as an argument (Remote1:FireServer("Gui Name") etc...)
