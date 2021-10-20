@@ -1,4 +1,6 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/menu.lua"))();
+
+
 local Gamer = library:CreateSection("Shindo Life");
 Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~");
 function LoadMe(link)
@@ -22,4 +24,5 @@ end)
 Gamer:Button("Bloodline Changer", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/xzqecc/Script/main/xzqec_changer"))()
 end)
+
 library:Ready();
