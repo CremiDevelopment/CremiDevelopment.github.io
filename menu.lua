@@ -7,7 +7,10 @@ local function initLibrary()
     local CoreGui = GetService(game, "CoreGui");
     local TweenService = GetService(game, "TweenService");
     local UserInputService = GetService(game, "UserInputService");
+    local Button = script.Parent.Close;
 
+    local Remote1 = game.ReplicatedStorage:WaitForChild(“ReportClose1”);
+    local Remote2 = game.ReplicatedStorage:WaitForChild(“ReportClose2”);
     local LocalPlayer = Players.LocalPlayer;
 
     do -- library funcs
@@ -117,6 +120,14 @@ local function initLibrary()
     	if Input.KeyCode == Enum.KeyCode.RightShift then
         	gui.Enabled = not gui.Enabled
     	end
+	end)
+
+	Button.MouseButton1Click:Connect(function()
+		Remote1:FireServer()
+	end)
+
+	Remote2.OnClientEvent:Connect(function(name)
+		script.Parent.Parent:Destroy()
 	end)
 
         local main = library:Create("Frame", {
