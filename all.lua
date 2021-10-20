@@ -1,16 +1,21 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/menu.lua"))();
-local Remote = game.ReplicatedStorage:WaitForChild("Remote Event Name Here")
+local Button = script.Parent.Close – assuming this script is a child of a TextButton
 
+local Remote1 = game.ReplicatedStorage:WaitForChild(“ReportClose1”)
+local Remote2 = game.ReplicatedStorage:WaitForChild(“ReportClose2”)
+
+Button.MouseButton1Click:Connect(function()
+    Remote1:FireServer() -- you can pass the name of the gui as an argument (Remote1:FireServer("Gui Name") etc...)
+end)
+
+Remote2.OnClientEvent:Connect(function(name) -- if you do pass an argument back then, be sure to create a variable to define it. If you didn't then leave it blank
+    script.Parent.Parent:Destroy() -- if the guis are all parented to this object, then they'd all be deleted, otherwise, do "script.Parent.Parent:FindFirstChild(name):Destroy()"
+end)
 
 local Gamer = library:CreateSection("Shindo Life");
 Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~");
 function LoadMe(link)
     loadstring(game:HttpGet(link))()
-end)
-Gamer:Button("Destroi Gui", function()
-	Remote.OnServerEvent:Connect(function(player)
-	    Remote:FireAllClients()
-	end)
 end)
 Gamer:Button("SnowHub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/SecretFolder/Web/scripts/SnxwHub.txt", true))()
