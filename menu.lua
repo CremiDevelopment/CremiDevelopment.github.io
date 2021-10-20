@@ -122,14 +122,6 @@ local function initLibrary()
     	end
 	end)
 
-	Button.MouseButton1Click:Connect(function()
-		Remote1:FireServer()
-	end)
-
-	Remote2.OnClientEvent:Connect(function(name)
-		script.Parent.Parent:Destroy()
-	end)
-
         local main = library:Create("Frame", {
             Name = "main";
             Parent = gui;
