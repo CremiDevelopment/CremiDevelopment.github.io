@@ -24,11 +24,5 @@ end)
 Gamer:Button("Bloodline Changer", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/xzqecc/Script/main/xzqec_changer"))()
 end)
-Gamer:Button("Скрипт 2", function()
-    LoadMe('https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/Cheat2.lua')
-end)
-Gamer:Button("Скрипт 3", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/Cheat3.lua'),true))()
-end)
 
 library:Ready();
