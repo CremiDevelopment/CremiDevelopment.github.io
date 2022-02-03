@@ -24,8 +24,5 @@ end)
 Gamer:Button("Bloodline Changer", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/xzqecc/Script/main/xzqec_changer"))()
 end)
-Gamer:Button("SolarisHub", function()
-	loadstring(game:HttpGet('https://solarishub.dev/script.lua', true))()
-end)
 
 library:Ready();
