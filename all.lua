@@ -2,12 +2,10 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cremi
 
 
 local Gamer = library:CreateSection("Shindo Life");
+Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~");
 function LoadMe(link)
     loadstring(game:HttpGet(link))()
 end
-Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~", function()
-	gui.Enabled = not gui.Enabled
-end)
 Gamer:Button("SnowHub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/SecretFolder/Web/scripts/SnxwHub.txt", true))()
 end)
