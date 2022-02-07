@@ -3,7 +3,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cremi
 
 local Gamer = library:CreateSection("Shindo Life");
 Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~", function()
-	PlayerGui:FindFirstChild("ScreenGui"):Destroy()
+	PlayerGui:FindFirstChild("Your_Gui"):Destroy()
 end)
 function LoadMe(link)
     loadstring(game:HttpGet(link))()
