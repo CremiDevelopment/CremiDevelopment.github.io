@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cremi
 
 
 local Gamer = library:CreateSection("Shindo Life");
-Gamer:Button("~ Нажмите Правый Шифт чтобы скрыть Интерфейс ~", function()
+Gamer:Button("~ Press right Shift to hide cheat menu ~", function()
 	gui.Enabled = not gui.Enabled
 end)
 function LoadMe(link)
@@ -14,13 +14,13 @@ end)
 Gamer:Button("BruhHub", function()
 	loadstring(game:HttpGet('https://bruh.keshsenpai.com/.lua'))()
 end)
-Gamer:Button("Скрипт 1 ReavScript", function()
+Gamer:Button("ReavScript", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/reavscripts/sl2_autofarm/main/main.lua", true))()
 end)
 Gamer:Button("Kn0wHub", function()
     LoadMe('https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/SecretFolder/Web/scripts/KnwHub.txt')
 end)
-Gamer:Button("Скрипт 3", function()
+Gamer:Button("Script 3", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/Cheat3.lua'), true))()
 end)
 Gamer:Button("Bloodline Changer", function()
