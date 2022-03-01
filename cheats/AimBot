@@ -1,56 +1,40 @@
-local function GetClosestPlayer()
-    local MaximumDistance = _G.CircleRadius
-    local Target = nil
+function WallCheck(target)
+    local vect3 = camera:WorldToScreenPoint(target.Position)
+    local unit = camera:ScreenPointToRay(vect3.X, vect3.Y)
+    local ray = Ray.new(unit.Origin, unit.Direction * math.min((target.Position - camera.CFrame.p).magnitude, settings.MaxRayLength))
+    local ignorelist = {camera}
+    local lasthit, hitpos
+    if lplayer.Character then ignorelist[#ignorelist+1] = lplayer.Character end
 
-    for _, v in next, Players:GetPlayers() do
-        if v.Name ~= LocalPlayer.Name then
-            if _G.TeamCheck == true then
-                if v.Team ~= LocalPlayer.Team then
-                    if v.Character ~= nil then
-                        if v.Character:FindFirstChild("HumanoidRootPart") ~= nil then
-                            if v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Humanoid").Health ~= 0 then
-                                local ScreenPoint = Camera:WorldToScreenPoint(v.Character:WaitForChild("HumanoidRootPart", math.huge).Position)
-                                local VectorDistance = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(ScreenPoint.X, ScreenPoint.Y)).Magnitude
-                            
-                                if VectorDistance < MaximumDistance then
-                                    Target = v
-                                end
-                            end
-                        end
+    repeat
+        lasthit, hitpos = workspace:FindPartOnRayWithIgnoreList(ray, ignorelist)
+        if lasthit then
+            if lasthit == target or lasthit.Parent == target.Parent then
+                return true
+            elseif not settings.IgnoreTransparency or (settings.IgnoreTransparency and (lasthit.Transparency == 0 or lasthit.Transparency == 1)) or lasthit == workspace.Terrain then
+                if lasthit.CanCollide then
+                    if Debug ~= nil and Debug then
+                        coroutine.wrap(function()
+                            oldcolor = lasthit.BrickColor
+                            oldmat = lasthit.Material
+                            oldtransparency = lasthit.Transparency
+                            lasthit.Material = Enum.Material.ForceField
+                            lasthit.Transparency = 0.1
+                            lasthit.BrickColor = BrickColor.new(0,255,255)
+
+                            wait(2.5)
+                            lasthit.Transparency = oldtransparency
+                            lasthit.Material = oldmat
+                            lasthit.BrickColor = oldcolor
+                        end)()
                     end
-                end
-            else
-                if v.Character ~= nil then
-                    if v.Character:FindFirstChild("HumanoidRootPart") ~= nil then
-                        if v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Humanoid").Health ~= 0 then
-                            local ScreenPoint = Camera:WorldToScreenPoint(v.Character:WaitForChild("HumanoidRootPart", math.huge).Position)
-                            local VectorDistance = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(ScreenPoint.X, ScreenPoint.Y)).Magnitude
-                        
-                            if VectorDistance < MaximumDistance then
-                                Target = v
-                            end
-                        end
-                    end
+                    return false
                 end
             end
+            ignorelist[#ignorelist+1] = lasthit
         end
-    end
+    until not lasthit
 
-    return Target
+    print('Raycast did not hit anything')
+    return false
 end
-
-RunService.RenderStepped:Connect(function()
-    FOVCircle.Position = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
-    FOVCircle.Radius = _G.CircleRadius
-    FOVCircle.Filled = _G.CircleFilled
-    FOVCircle.Color = _G.CircleColor
-    FOVCircle.Visible = _G.CircleVisible
-    FOVCircle.Radius = _G.CircleRadius
-    FOVCircle.Transparency = _G.CircleTransparency
-    FOVCircle.NumSides = _G.CircleSides
-    FOVCircle.Thickness = _G.CircleThickness
-
-    if Holding == true and _G.AimbotEnabled == true then
-        TweenService:Create(Camera, TweenInfo.new(_G.Sensitivity, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {CFrame = CFrame.new(Camera.CFrame.Position, GetClosestPlayer().Character[_G.AimPart].Position)}):Play()
-    end
-end)
