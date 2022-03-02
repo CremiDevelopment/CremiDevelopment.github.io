@@ -1,5 +1,5 @@
 while wait() do
-game.Workspace.NAME.Humanoid.MaxHealth = math.huge
+game.Workspace.BusterCRG.Humanoid.MaxHealth = math.huge
 local forcefield =Instance.new("ForceField",game.Players.LocalPlayer.Character)
 wait()
 forcefield:remove()
