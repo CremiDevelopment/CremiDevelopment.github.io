@@ -1,0 +1,7 @@
+local PlayerName = game.Players.LocalPlayer.Name
+
+while true do
+wait(0.1)
+game.Workspace.PlayerName.Humanoid.Health = 100
+wait(0.1)
+end
