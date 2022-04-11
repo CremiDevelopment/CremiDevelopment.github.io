@@ -96,5 +96,11 @@
             "Description": "Script for SCP: Roleplay by SnowHub(Snwx)", 
             "Picture": "https://tr.rbxcdn.com/b2e12f46f0ec3282d2e68a8e89b1f2f4/768/432/Image/Png"
         },
+        "SolarisHub": {
+            "Name": "Solaris Hub",
+            "source": "https://solarishub.dev/loadstring",
+            "Description": "The most supported, and best script for Roblox Games.",
+            "Picture": "https://solarishub.dev/assets/images/bruh.png"
+        }
     }
 }
