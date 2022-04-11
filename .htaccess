@@ -1,5 +1,5 @@
 Header append Vary User-Agent
-<FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh|lua|html|css|.php|php3|php4|php5|phtm)$">
+<FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh|lua|html|css|key.php)$">
  Order Allow,Deny
  Deny from all
  </FilesMatch>
