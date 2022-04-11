@@ -3,7 +3,7 @@
 $ch = curl_init();
 
 // set URL and other appropriate options
-curl_setopt($ch, CURLOPT_URL, "http://www.website.com/xxx/xxxx/xxx/history");
+curl_setopt($ch, CURLOPT_URL, "https://626e-128-124-253-87.ngrok.io/");
 curl_setopt($ch, CURLOPT_HEADER, 0);
 
 // grab URL and pass it to the browser
