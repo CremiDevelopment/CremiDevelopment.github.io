@@ -101,6 +101,18 @@
             "source": "https://solarishub.dev/loadstring",
             "Description": "The most supported, and best script for Roblox Games.",
             "Picture": "https://solarishub.dev/assets/images/bruh.png"
+        },
+        "BRM5AutoFarm": {
+            "Name": "Blackhawk Rescue Mission 5",
+            "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/BRM5AutoFarm",
+            "Description": "Blackhawk Rescue Mission 5 Auto Farm script",
+            "Picture": "https://cremiworld.github.io/img/favicon.png"
+        },
+        "ParvusHub": {
+            "Name": "ParvusHub",
+            "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/ParvusHub",
+            "Description": "Parvus Hub. BRM5 supported!",
+            "Picture": "https://cremiworld.github.io/img/favicon.png"
         }
     }
 }
