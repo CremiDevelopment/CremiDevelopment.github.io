@@ -1,5 +1,5 @@
---v036
---Update: Updated script 4/26/2022
+--v037
+--Update: Updated script 5/5/2022
 --Put the script in autoexec if your exploit have it, free exploits don't usually.
 
 Credits = [[
@@ -14,7 +14,7 @@ Credits = [[
     other steps on how to use the script correctly Discord Server: https://discord.gg/8KqTZVcfCP
     
     The real owner and the creator of this script is Tech Brain#0001
-    If you get this script from anywhere else send their info to me at Tech Brain#0001 in the discord
+    If you get this script from some others, send their info to me at Tech Brain#0001 in the discord
     Discord Server: https://discord.gg/8KqTZVcfCP or discord.io/techbrain
 ]]
 
