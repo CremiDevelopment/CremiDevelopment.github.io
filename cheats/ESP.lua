@@ -332,15 +332,6 @@ do
 		end
 	end
 	
-	--open/close gui
-	game:GetService("UserInputService").InputBegan:connect(function(input, gameProcessed)
-		if input.KeyCode == Enum.KeyCode.RightShift then
-			if not gameProcessed then
-				age1.Enabled = not age1.Enabled
-			end
-		end
-	end)
-	
 	--auto-update
 	while wait(10) do
 		for _,v in pairs(game:GetService("Players"):GetChildren()) do
