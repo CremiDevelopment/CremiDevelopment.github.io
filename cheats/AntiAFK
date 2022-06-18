@@ -1,4 +1,4 @@
-wait(0.5)local ba=Instance.new("ScreenGui")
+wait(0.5)local ba=Instance.new("AntiAFKcw")
 local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
 local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
 ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
