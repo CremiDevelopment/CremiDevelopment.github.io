@@ -1,5 +1,11 @@
 {
     "scriptHub": {
+         "CremiWorld": {
+            "Name": "CremiWorld",
+            "source": "https://cremidevelopment.github.io/CremiWorld.lua",
+            "Description": "CremiWorld script to any game!",
+            "Pictrure": "https://cremidevelopment.github.io/img/favicon.png"
+        },
          "Dex Explorer": { 
             "Name": "Dex Explorer", 
             "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/Dex.txt", 
@@ -40,31 +46,31 @@
             "Name": "Cremi World Shindo",
             "source": "https://cremiworld.github.io/all.lua",
             "Description": "Free Shindo Life multi script, had with him a the best worked script's for shindo life with 2022 year",
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
+            "Picture": "https://cremidevelopment.github.io/img/favicon.png"
         },
         "ESP": {
             "Name": "ESP", 
             "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/ESP.lua", 
             "Description": "The best ESP! All games supporting! Easy for use! Right Shift to hide.", 
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
+            "Picture": "https://cremidevelopment.github.io/img/favicon.png"
         },
         "YourMom": {
             "Name": "YourMom", 
             "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/YourMom", 
             "Description": "YourMom - FE script to Roblox, beauty, and easy for use", 
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
+            "Picture": "https://cremidevelopment.github.io/img/favicon.png"
         },
         "CoolGui": {
             "Name": "C00l Gui", 
             "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/C00lgui", 
             "Description": "C00l Gui, admin FE script's", 
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
+            "Picture": "https://cremidevelopment.github.io/img/favicon.png"
         },
         "CoolGuiReborn": {
             "Name": "C00l Gui Reborn", 
             "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/C00lGuiReborn", 
             "Description": "Reborn version of C00l Gui", 
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
+            "Picture": "https://cremidevelopment.github.io/img/favicon.png"
         },
         "Blox Fruit1": {
             "Name": "Blox Fruit by SHAREHACK", 
@@ -82,7 +88,7 @@
             "Name": "Anti AFK", 
             "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/AntiAFK", 
             "Description": "Anti AFK for all roblox games.", 
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
+            "Picture": "https://cremidevelopment.github.io/img/favicon.png"
         },
         "InfinitySpinShindo": {
             "Name": "Shindo Life Infinity Spin", 
@@ -102,17 +108,11 @@
             "Description": "The most supported, and best script for Roblox Games.",
             "Picture": "https://solarishub.dev/assets/images/bruh.png"
         },
-        "BRM5AutoFarm": {
-            "Name": "Blackhawk Rescue Mission 5",
-            "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/BRM5AutoFarm",
-            "Description": "Blackhawk Rescue Mission 5 Auto Farm script",
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
-        },
         "ParvusHub": {
             "Name": "ParvusHub",
             "source": "https://raw.githubusercontent.com/CremiWorld/CremiWorld.github.io/main/cheats/ParvusHub",
             "Description": "Parvus Hub. BRM5 supported!",
-            "Picture": "https://cremiworld.github.io/img/favicon.png"
+            "Picture": "https://cremidevelopment.github.io/img/favicon.png"
         }
     }
 }
