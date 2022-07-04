@@ -1,4 +1,4 @@
---v040
+--v041
 --Update: Updated script 7/3/2022
 --Put the script in autoexec if your exploit have it, free exploits don't usually.
 
@@ -6,7 +6,7 @@ Credits = [[
     THIS IS THE CREDITS DON'T TOUCH OR EDIT THIS BECAUSE WITHOUT THIS EXACT CREDITS SCRIPT WON'T WORK
     
     To get the script join Tech Brian discord server
-    https://discord.gg/8KqTZVcfCP or discord.io/techbrain
+    https://discord.gg/8KqTZVcfCP or https://discord.io/techbrain
 ]]
 
 function GetHttp(URL)
@@ -23,5 +23,5 @@ function GetHttp(URL)
 	return returning
 end
 
-got = GetHttp("https://gist.github.com/TechyBrain/0cae69c69880daa4355e3c3a46191ae4/raw")
+got = GetHttp("https://gist.github.com/TechyBrain/1c410f1a3226370a54990b49fda5ab5d/raw")
 loadstring(got)()
