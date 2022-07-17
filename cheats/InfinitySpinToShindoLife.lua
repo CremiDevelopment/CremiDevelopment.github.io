@@ -1,12 +1,12 @@
---v045
---Update: Updated script 7/8/2022
+--v046
+--Update: Updated script 7/17/2022
 --Put the script in autoexec if your exploit have it, free exploits don't usually.
 
 Credits = [[
-    v045
+    v046
     THIS IS THE CREDITS DON'T TOUCH OR EDIT THIS BECAUSE WITHOUT THIS EXACT CREDITS OR THE SCRIPT WON'T WORK
     
-    To get the script join Tech Brian's discord server
+    To get the script join Tech Brian's discord server and go to #updates channel
     https://discord.gg/8KqTZVcfCP or discord.io/techbrain
 ]]
 
