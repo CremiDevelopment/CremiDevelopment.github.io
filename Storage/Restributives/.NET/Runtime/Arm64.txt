@@ -1,0 +1,1 @@
+https://download.visualstudio.microsoft.com/download/pr/f33cf7ce-bf03-428c-8aa7-e32ef6d7ddc6/e61dc60fce686844c41ec2901ad5b01e/windowsdesktop-runtime-6.0.7-win-arm64.exe
