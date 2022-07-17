@@ -1,0 +1,1 @@
+https://download.visualstudio.microsoft.com/download/pr/d238bcf4-7362-4885-b371-e23a269a96bd/838e7e2d43528f9c79001f7737d38e7d/dotnet-sdk-6.0.302-win-x86.exe
